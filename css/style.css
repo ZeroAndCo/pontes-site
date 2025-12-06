@@ -1,0 +1,218 @@
+/* Shared styles for Pontes para Leitura */
+:root {
+  --primary-color: #0e3430;
+  --secondary-color: #fae3c9;
+  --accent-color: #f26a4f;
+  --text-color: #3b2314;
+  --text-muted: #6b4a33;
+  --bg-color: #faf2e6;
+  --max-width: 960px;
+  --radius: 12px;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text-color);
+  background: var(--secondary-color);
+  line-height: 1.6;
+}
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+header {
+  background: var(--bg-color);
+  box-shadow: var(--shadow-soft);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fae3c9;
+  border: 2px solid #0e3430;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3b2314;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+.brand-text strong {
+  font-size: 1rem;
+}
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  font-weight: 500;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.7rem 1.4rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--accent-color);
+  color: #1b1206;
+  box-shadow: var(--shadow-soft);
+}
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--primary-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.btn-outline:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+  background: var(--bg-color);
+}
+.hero {
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
+  gap: 2rem;
+  align-items: center;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  background: #f4b15a33;
+  color: #8b4c0c;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+h1 {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  margin: 0.75rem 0;
+  color: var(--primary-color);
+}
+.lead {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+.pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+.pill {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.04);
+}
+.card {
+  background: #ffffff;
+  border-radius: var(--radius);
+  padding: 1.1rem 1.2rem;
+  box-shadow: var(--shadow-soft);
+  font-size: 0.95rem;
+}
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+.section {
+  margin-bottom: 2.5rem;
+}
+.section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary-color);
+}
+footer {
+  background: #0e3430;
+  color: #fae3c9;
+  padding: 1.5rem 1.25rem;
+  font-size: 0.85rem;
+}
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.footer-links a {
+  color: #f4b15a;
+}
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
