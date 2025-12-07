@@ -1,4 +1,50 @@
 /* Campaign-specific styles for É Só o Começo */
+.campaign-main {
+  background: #243a3b;
+}
+.campaign-main .card {
+  background: var(--bg-color);
+}
+.campaign-main,
+.campaign-main p,
+.campaign-main .lead,
+.campaign-main h1,
+.campaign-main h2,
+.campaign-main h3,
+.campaign-main .pill,
+.campaign-main .hero-badge {
+  color: #fae3c9;
+}
+.campaign-main a {
+  color: #f4b15a;
+}
+.campaign-main .btn-primary {
+  color: #fed001;
+}
+.campaign-main .pill {
+  background: rgba(250, 227, 201, 0.18);
+}
+.campaign-main .hero-badge {
+  background: rgba(244, 177, 90, 0.25);
+  color: #fae3c9;
+}
+/* Restore dark text inside light cards */
+.campaign-main .card,
+.campaign-main .card h3,
+.campaign-main .card p,
+.campaign-main .card a {
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bugaki", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
 .hero-card {
   background: #0e3430;
   border-radius: var(--radius);
@@ -79,7 +125,7 @@ li {
   margin-bottom: 1rem;
 }
 .faq-item strong {
-  display: block;
+  /* display: block; */
   margin-bottom: 0.25rem;
 }
 @media (max-width: 768px) {

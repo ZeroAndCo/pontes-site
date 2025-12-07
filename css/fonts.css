@@ -1,0 +1,19 @@
+/* Bugaki font-face declarations. Place TTF files into ../fonts/ */
+@font-face {
+  font-family: "Bugaki";
+  src: url("../fonts/BugakiRegular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bugaki";
+  src: url("../fonts/BugakiOblique.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Tip: For faster loads, consider converting TTF to WOFF2.
+   After conversion, update src to include WOFF2 first, then TTF as fallback. */
