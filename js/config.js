@@ -2,7 +2,7 @@
 // Replace placeholders with real values when ready.
 
 window.PONTES_CONFIG = {
-  GA_MEASUREMENT_ID: 'G-XXXXXXXXXX',
+  GA_MEASUREMENT_ID: 'G-F1KWKWZV8G',
   META_PIXEL_ID: 'PIXEL_ID_AQUI',
   VAKINHA_URL: 'VAKINHA_URL_AQUI',
   WHATSAPP_URL: 'WHATSAPP_LINK_AQUI',
