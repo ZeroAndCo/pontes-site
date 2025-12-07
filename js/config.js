@@ -5,7 +5,7 @@ window.PONTES_CONFIG = {
   GA_MEASUREMENT_ID: 'G-F1KWKWZV8G',
   META_PIXEL_ID: 'PIXEL_ID_AQUI',
   VAKINHA_URL: 'VAKINHA_URL_AQUI',
-  WHATSAPP_URL: 'WHATSAPP_LINK_AQUI',
+  WHATSAPP_URL: 'https://wa.me/5511994066732',
   CONTACT_EMAIL: 'contato@pontesparaleitura.com.br',
   SITE_URL: 'https://pontesparaleitura.com.br'
 };

@@ -278,7 +278,14 @@ footer {
   background: #fcd99f;
 }
 .home-main .card {
-  background: var(--bg-color);
+  background: #243a3b;
+}
+.home-main .card p,
+.home-main .card h2 {
+  color: #fae3c9;
+}
+.home-main .card a {
+  color: var(--text-color);
 }
 .home-main,
 .home-main p,
@@ -297,13 +304,19 @@ footer {
   background: rgba(250, 227, 201, 0.18);
 }
 .home-main .hero-badge {
-  background: rgba(244, 177, 90, 0.25);
+  background: #2e7367;
   color: #fae3c9;
 }
-/* Restore dark text inside light cards */
-.home-main .card,
-.home-main .card h2,
-.home-main .card p,
-.home-main .card a {
-  color: var(--text-color);
+
+#quem-somos .card {
+  background: #fae3c9;
+}
+#quem-somos .card h2 {
+  color: #0e3430;
+}
+#quem-somos .card p {
+  color: #3b2314;
+}
+#quem-somos .card a {
+  color: var(--primary-color);
 }
