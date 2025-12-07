@@ -1,4 +1,8 @@
 /* Campaign-specific styles for É Só o Começo */
+body {
+  background: var(--secondary-color);
+}
+
 .campaign-main {
   background: #243a3b;
 }
