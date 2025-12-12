@@ -85,9 +85,12 @@ header {
   gap: 1rem;
   font-size: 0.9rem;
   flex-wrap: wrap;
+  align-items: center; /* center links vertically relative to button */
 }
 .nav-links a {
   font-weight: 500;
+  display: inline-flex;
+  align-items: center; /* ensure text sits centered inside the link */
 }
 .btn {
   display: inline-flex;
