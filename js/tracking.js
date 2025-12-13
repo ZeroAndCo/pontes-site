@@ -1,6 +1,6 @@
-// Basic click tracking for Vakinha and WhatsApp links. Adds UTMs if missing.
+// Basic click tracking for Stripe (donation) and WhatsApp links. Adds UTMs if missing.
 (function() {
-  function addVakinhaUtms(link) {
+  function addStripeUtms(link) {
     try {
       var url = new URL(link.href, window.location.origin);
       if (!url.searchParams.has('utm_source')) {
@@ -15,21 +15,21 @@
   document.addEventListener('DOMContentLoaded', function () {
     var cfg = window.PONTES_CONFIG || {};
 
-    // Fill placeholders if present using config
-    document.querySelectorAll('a[data-track="vakinha"]').forEach(function (a) {
-      if (cfg.VAKINHA_URL && (a.getAttribute('href') || '').includes('VAKINHA_URL_AQUI')) {
-        a.setAttribute('href', cfg.VAKINHA_URL);
+    // Stripe donation buttons
+    document.querySelectorAll('a[data-track="stripe"]').forEach(function (a) {
+      if (cfg.STRIPE_URL && (a.getAttribute('href') || '').includes('STRIPE_URL_AQUI')) {
+        a.setAttribute('href', cfg.STRIPE_URL);
       }
-      addVakinhaUtms(a);
+      addStripeUtms(a);
       a.addEventListener('click', function () {
         if (typeof window.gtag === 'function') {
-          window.gtag('event', 'click_vakinha', {
+          window.gtag('event', 'click_stripe', {
             event_category: 'doacao',
-            event_label: 'vakinha_landing_page'
+            event_label: 'stripe_landing_page'
           });
         }
         if (typeof window.fbq === 'function') {
-          window.fbq('trackCustom', 'DoarVakinhaClick', {
+          window.fbq('trackCustom', 'DoarStripeClick', {
             placement: 'landing_page',
             campaign: 'e_so_o_comeco'
           });
