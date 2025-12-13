@@ -1,14 +1,44 @@
 // Basic click tracking for Stripe (donation) and WhatsApp links. Adds UTMs if missing.
 (function() {
+  // Collect incoming UTM-like params from the current page URL
+  function getIncomingParams() {
+    var incoming = {};
+    try {
+      var src = new URL(window.location.href);
+      src.searchParams.forEach(function (val, key) {
+        // Forward common tracking params (utm_*, gclid, fbclid, etc.)
+        if (key.startsWith('utm_') || key === 'gclid' || key === 'fbclid' || key === 'msclkid') {
+          incoming[key] = val;
+        }
+      });
+    } catch (e) {}
+    return incoming;
+  }
+
   function addStripeUtms(link) {
     try {
       var url = new URL(link.href, window.location.origin);
+      var incoming = getIncomingParams();
+
+      // Apply incoming params first (preserve any existing on the link)
+      Object.keys(incoming).forEach(function (key) {
+        if (!url.searchParams.has(key)) {
+          url.searchParams.set(key, incoming[key]);
+        }
+      });
+
+      // Ensure sensible defaults if no UTM present
       if (!url.searchParams.has('utm_source')) {
         url.searchParams.set('utm_source', 'pontes_lp');
-        url.searchParams.set('utm_medium', 'button');
-        url.searchParams.set('utm_campaign', 'e_so_o_comeco');
-        link.href = url.toString();
       }
+      if (!url.searchParams.has('utm_medium')) {
+        url.searchParams.set('utm_medium', 'button');
+      }
+      if (!url.searchParams.has('utm_campaign')) {
+        url.searchParams.set('utm_campaign', 'e_so_o_comeco');
+      }
+
+      link.href = url.toString();
     } catch (e) {}
   }
 
